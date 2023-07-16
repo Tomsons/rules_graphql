@@ -39,10 +39,9 @@ def graphql_register_toolchains(
             url = value['url'],
         )
 
-        native.register_toolchains("@com_github_tomsons_rules_graphql//graphql:apollo_router_{}".format(key))
+        native.register_toolchains("@apollo_router_toolchains//:{}".format(key))
     toolchains_repo(
         name = "apollo_router_toolchains",
-        tool = "router",
         repository_name = "apollo_router",
         toolchain_name = "toolchain",
         root_repository_name = "com_github_tomsons_rules_graphql",

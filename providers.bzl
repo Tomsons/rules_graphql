@@ -1,3 +1,3 @@
 RouterInfo = provider (
-    fields = ["path", "version"]
+    fields = ["bin", "version"]
 )

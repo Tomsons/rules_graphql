@@ -48,7 +48,6 @@ resolved_toolchain = rule(
     incompatible_use_toolchain_transition = True,
 )
 """.format(
-               tool = repository_ctx.attr.tool,
                repository_name = repository_ctx.attr.repository_name,
                toolchain_name = repository_ctx.attr.toolchain_name,
                root_repository_name = repository_ctx.attr.root_repository_name,
@@ -71,13 +70,12 @@ resolved_toolchain(name = "resolved_toolchain", visibility = ["//visibility:publ
     for [platform, meta] in ROUTER_REPOSITORY.items():
         build_content += """
 toolchain(
-    name = "{tool}_{platform}_toolchain",
+    name = "{platform}",
     exec_compatible_with = {compatible_with},
     toolchain = "@{repository_name}_{platform}//:{toolchain_name}",
     toolchain_type = "@{root_repository_name}//:{toolchain_type_name}",
 )
 """.format(
-            tool = repository_ctx.attr.tool,
             platform = platform,
             compatible_with = meta["exec_compatible_with"],
             repository_name = repository_ctx.attr.repository_name,
@@ -94,7 +92,6 @@ toolchains_repo = repository_rule(
     doc = """Creates a repository with toolchain definitions for all known platforms
      which can be registered or selected.""",
     attrs = {
-        "tool": attr.string(),
         "repository_name": attr.string(),
         "toolchain_name": attr.string(),
         "root_repository_name": attr.string(),
