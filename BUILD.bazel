@@ -1,0 +1,4 @@
+toolchain_type(
+    name = "router_toolchain",
+    visibility = ["//visibility:public"],
+)
