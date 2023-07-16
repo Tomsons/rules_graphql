@@ -17,9 +17,10 @@
   <component name="ChangeListManager">
     <list default="true" id="856c3fe4-5b26-442b-aaff-ee1edf45e970" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../defs.bzl" beforeDir="false" afterPath="$PROJECT_DIR$/../defs.bzl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../graphql/deps.bzl" beforeDir="false" afterPath="$PROJECT_DIR$/../graphql/deps.bzl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graphql/gateway.bzl" beforeDir="false" afterPath="$PROJECT_DIR$/../graphql/gateway.bzl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../graphql/internal/router.bzl" beforeDir="false" afterPath="$PROJECT_DIR$/../graphql/internal/router.bzl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../graphql/toolchains.bzl" beforeDir="false" afterPath="$PROJECT_DIR$/../graphql/toolchains.bzl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../providers.bzl" beforeDir="false" afterPath="$PROJECT_DIR$/../providers.bzl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +42,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/tom/Documents/workspace/poc/rules_graphql/graphql/internal",
+    "last_opened_file_path": "/Users/tom/Documents/workspace/poc/rules_graphql/graphql",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -52,6 +53,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../graphql" />
       <recent name="$PROJECT_DIR$/../graphql/internal" />
     </key>
   </component>
@@ -63,7 +65,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1689500939726</updated>
-      <workItem from="1689500940975" duration="7430000" />
+      <workItem from="1689500940975" duration="10027000" />
     </task>
     <servers />
   </component>

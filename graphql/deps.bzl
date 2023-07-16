@@ -1,4 +1,5 @@
-load("//graphql/internal:router.bzl", "ROUTER_REPOSITORY", "toolchains_repo")
+load("//graphql/internal:router.bzl", "ROUTER_REPOSITORY")
+load("//shared:toolchains_repo.bzl", "toolchains_repo")
 
 def _router_binary_repo_impl(ctx):
     ctx.download_and_extract(ctx.attr.url.format(
@@ -32,12 +33,14 @@ router_binary_repo = repository_rule (
 def graphql_register_toolchains(
     rust_router_version = "1.24.0"
 ):
+    meta = {}
     for key, value in ROUTER_REPOSITORY.items():
         router_binary_repo(
             name = "apollo_router_{}".format(key),
             rust_router_version = rust_router_version,
             url = value['url'],
         )
+        meta[key] = value["exec_compatible_with"]
 
         native.register_toolchains("@apollo_router_toolchains//:{}".format(key))
     toolchains_repo(
@@ -45,5 +48,6 @@ def graphql_register_toolchains(
         repository_name = "apollo_router",
         toolchain_name = "toolchain",
         root_repository_name = "com_github_tomsons_rules_graphql",
-        toolchain_type_name = "router_toolchain"
+        toolchain_type_name = "router_toolchain",
+        meta = meta,
     )
