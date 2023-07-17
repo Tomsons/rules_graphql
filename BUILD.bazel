@@ -2,3 +2,8 @@ toolchain_type(
     name = "router_toolchain",
     visibility = ["//visibility:public"],
 )
+
+toolchain_type(
+    name = "rover_toolchain",
+    visibility = ["//visibility:public"],
+)
